@@ -1,0 +1,31 @@
+s= "pankaj"
+print ("============ Positive Index in PYTHON ===========")
+print (s[0])
+print (s[1])
+print (s[5])
+print ("============ Negative Index in PYTHON ===========")
+print (s[-1])
+print (s[-2])
+print (s[-6])
+
+print ("========== Slice Operator =============")
+
+print (s[0:5]) #print 0 to 4
+print (s[0:6]) 
+print (s[1:1]) #Does not print anything
+print (s[0:1]) # prints first letter
+
+print (s[1:]) #by default End index is End of the String
+print (s[:4]) #by default Begin index is Start of the string
+print (s[:]) #prints full string
+
+s="durgasoftwaresolutions"
+
+print (s[1:10]) #prints 1 to 9
+print (s[1:10:2]) #prints 1 to 9 but skipping 1 character in between
+print (s[1:10:0])
+
+#print (s[100]) #As Slicing is not used, error->string index out of range 
+
+print ("******** returns begin index to end Index-1********")
+

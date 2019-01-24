@@ -1,0 +1,35 @@
+#Immutable Fundamental Data Types
+v1=15 #One object is created with value 15
+print(id(v1)) 
+v2=15 #No new object is created, it points to existing object with same value. 
+print(id(v2))# This id value is same as id for v1 as only one object is shared.
+
+v3=25
+print(id(v3))#Different Object hence different id value
+
+#Now if you try to change the existing object, it will create new object
+v1=99 
+print(v1)
+print(v2)
+
+x=True
+y=True
+z=True
+print(id(x))
+print(id(y))
+print(id(z))
+
+#is Operator
+x=256
+y=256
+print(x is y)#True
+print(y is x)#True
+x=257
+y=257
+print(x is y)#True
+print(y is x)#True
+print(id(x))
+print(id(y))
+x=2.5
+y=2.5
+print(x is y)

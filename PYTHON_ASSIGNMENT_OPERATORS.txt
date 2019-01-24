@@ -1,0 +1,22 @@
+##Assignment Operators
+
+a,b,c,d = 10,20,30,40
+
+#a,b,c=10,20 #not enough values to unpack (expected 3, got 2)
+
+#Compound Assignment Operator
+
+x=100
+x+=10 #x = x+5 --> x=5+5 --> 10
+print(x)
+
+print(++x)#It is not increment operator, just a sign.
+
+#In PYTHON, increment and decrement operators are not available.
+ 
+print(--x)#treated as sign and not the decrement operator
+print(---x)
+
+a=4
+a&=5 # It is  a=a&5 --> &=Bitwise operator, =Assignment Operator
+print(a)

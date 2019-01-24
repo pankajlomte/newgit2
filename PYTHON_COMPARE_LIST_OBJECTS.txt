@@ -1,0 +1,76 @@
+
+
+##Comparing List and Objects
+
+# Difference between is and ==
+
+x=['dog','cat','rat']
+y=['dog','cat','rat']
+z=['dog','cAt','rat']
+
+print("id of x",id(x))
+print("id of y",id(y))
+print()
+print("Here Address of x and y is different")
+print()
+print("x is y --> ", x is y) #False--> As it Compares the references, 2 different objects
+print()
+
+#Here list is compared and As list is mutable, as both lists are different, returns False
+
+#Now the contents of List are Strings. So if we compare strings from the list then:
+
+print("id of x[0] i.e. dog --> ",id (x[0]))
+print("id of y[0] i.e. dog --> ",id (y[0])) #Addresses are same for contents 
+print(x[0] is y[0])#True
+print(type(x))#<class 'list'>
+print(type(x[0]))#<class 'str'>
+
+##
+
+x=[50,20,30]
+y=[40,90,100,120,170]
+
+print(x>y)#True.... Just Compares only first element
+
+
+x=[50,20,30]
+y=[50,90,100,120,170]
+
+print(x>=y)#If Element matches then it compares next element
+#So here first element is 50 which is same in y also. It compares next element from x and y i.e. 20 and 90.
+
+x=[50,90,100,200,300]
+y=[50,90,100,120,170]
+
+print(x>=y)
+
+##Nested Lists
+
+x=[10,20,[90,60]]
+print("List within the list is --> ",x[2])
+print("To access element from nested list --> ",x[2][0])
+print("To access element from nested list --> ",x[2][1])
+
+#Here [2] refers to nested list and [0] refers first element from the nested list
+
+
+##To Print elements Rowise
+
+x=[[10,20,30],[40,50,60],[70,80,90]]
+print(x)
+print()
+print("print list contents Rowwise")
+print()
+for r in x:
+  print(r)
+print()
+
+##To Print Elements in Matrix Style
+
+print("Now Print in Matrix style")
+for i in range(len(x)): #0 to 2 i.e. outer list
+  for j in range(len(x[i])):#Inner Lists
+    print(x[i][j],end=' ') #Elements from Inner list i.e. Nested List
+  print()
+'''

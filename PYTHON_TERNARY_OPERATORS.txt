@@ -1,0 +1,31 @@
+##TERNARY OPERATORS
+
+#Syntax: First Value if condition else Second Value
+javascript:;
+x=30 if 10<20 else 40
+print(x)#30
+
+x=30 if 10>20 else 40
+print(x)#40
+
+#Nesting of conditional operators
+
+#x=firstvalue if condition1 else secondvalue if condition2 else thirdvalue
+# So it will to go to next condition only when preceding is false.
+
+x=10 if 20<30 else 40 if 50<60 else 70
+print(x)
+print('')
+x=10 if 20>30 else 40 if 50<60 else 70
+print(x)
+x=10 if 20>30 else 40 if 50>60 else 70
+print(x)
+
+a=int(input("enter number:"))
+
+
+
+
+
+
+

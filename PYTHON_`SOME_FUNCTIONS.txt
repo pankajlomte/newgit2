@@ -1,0 +1,83 @@
+'''
+s=input("Enter the string")
+output=''
+for x in s:
+  if x.isalpha():
+    output=output+x
+    previous=x
+    print("output --> ",previous)
+    print("output in if condition is --> ",output)
+    
+  else:
+    #output=output+previous*x-1 #can't multiply sequence by non-int of type 'str'
+    output=output+previous*(int(x)-1) #Converted x into Int 
+    print("output in else condition is --> ",output)
+print()
+print("Final output --> ",output)
+
+##Find Character by Unicode value:
+#chr(Unicode value) #Ex. Chr(97) = ‘a’
+##Find Unicode value by Character:
+#ord(character) #Ex. ord(‘a’) = 97  ? ord is ordinal value.
+
+u=ord('a')
+print(type(u))
+print("Unicode value is --> ",u) #97
+o= chr(97)
+print(type(o))
+print("Character value is --> ",o)
+
+s=input("Enter the string")
+output=''
+for x in s:
+  if x.isalpha():
+    output=output+x
+    previous=x
+  else:
+    newch = chr(ord(previous)+int(x))
+    output=output+newch
+print()
+print("newch is --> ", newch)
+print()
+print("output is --> ",output)
+
+
+
+s1=input("Enter 1st String")
+s2=input("Enter 2nd String")
+i=j=0
+output=''
+
+while i<len(s1) or j<len(s2):
+  if i<len(s1):
+    output=output+s1[i]
+    i+=1
+  if j<len(s2):
+    output=output+s2[j]
+    j+=1
+  
+print(output)
+    
+
+
+l=[10,20,30,10,40,10,80]
+print( l.index(10)) #Returns Index
+l.append(90)
+print(l)
+l.insert(3,999)#nserts 999 at index 3 in the list
+print(l)
+l.insert(90,777)#nserts 999 at max index in the list
+print(l)
+
+
+
+##Extend function
+
+l1=[10,20,30]
+l2=[11,44,22,33]
+l1.extend(l2)
+print(l1)
+
+l1.sort(reverse=True) #44, 33, 30, 22, 20, 11, 10 --> Sorts the reverse order
+print(l1)
+print("", l1.pop())#returns last element by default

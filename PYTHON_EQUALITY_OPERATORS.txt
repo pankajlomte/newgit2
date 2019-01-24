@@ -1,0 +1,42 @@
+#EQUALITY OPERATORS (==, !=)
+
+#Intergers
+print(10==20)#False
+print(10!=20)#True 
+
+print('')
+#Boolean
+print(1==True)
+print(10!=True)
+print(0==False)
+print('')
+print(True==False)
+print(False==False)#Comparing Just Content
+
+#Strings
+print('durga'=='durga')#True
+print('durga'=='Durga')#False
+
+#Different or incompatible Data Types
+print('')
+print('durga'==10)
+print('durga'!=10)
+
+print('')
+#Chaining in Equality operators
+print(10==20==30==40)
+print(10==5+5==2*5==100//10)
+
+#Equality Operator does not Check ASCII value with String
+print('a'==97)
+
+print('')
+#Complex Data types
+print((10+2j)==(10+2j))#True
+print((10+2j)=='durga')#False
+
+print('')
+print(10==10.0)#True --> Here implicit coversion done to 10.0
+print(10=='10')#False
+print(10.10==10.1)#True
+

@@ -1,0 +1,36 @@
+##1. Remove Duplicate Characters from the String 
+##2. Print the Character Frequency from the String
+##3. Reverse Words
+
+##4. Search with Substring
+'''
+s=input("Enter main String")
+sub=input("Enter substring to search")
+if sub in s:
+  print(sub,"is found in main string ",s)
+else:
+  print("substring","""'""",sub,"""'""","not found in main String",s)
+
+
+##is Operator --> Reference operator
+#List is mutable
+l1=['A','B','C']
+l2=['A','B','C']
+
+#Here the contents looks same but these are 2 different objects. 
+#They have different addresses in memory.
+print(id(l1))
+print(id(l2))
+print(l1 is l2)#False
+
+l3=l2 #Both Lists are pointed to same object
+print(l2 is l3)#True
+
+'''
+city=input("Enter the city")
+list=['pune','latur','goa']
+if city.strip() in list:
+  print("City is available in the list")
+else:
+  print("enter valid city")
+

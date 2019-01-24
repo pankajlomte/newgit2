@@ -1,0 +1,42 @@
+a='durga'
+b='ravi'
+print("a='durga'", "b='ravi'")
+
+print('')
+print('Based on Alphabetical Order')
+print("a>b ==> ",a>b)
+print("a>=b ==> ",a<b)
+print("a<b ==> ", a>=b)
+print("a<=b ==> ",a<=b)
+
+print('')
+print('As same alphabets, based on ASCII codes')
+a='Durga'
+b='durga'
+print("a='Durga'","b='durga'")#So ASCII--> D=68,d=100
+print('')
+print("a>b ==> ",a>b)
+print("a>=", a>=b)
+print("a<b", a<b)
+print("a<=b", a<=b)
+
+print('')
+print('As same alphabets, based on ASCII codes')
+a='durga'
+b='darga'
+print("a='durga'","b='darga'") 
+print('')
+print("a>b ==> ",a>b)
+print("a>=", a>=b)
+print("a<b", a<b)
+print("a<=b", a<=b)
+
+print('')
+a=True
+b=False
+print("a= True","b= False")#Boolean Values
+print('') #So True=1, False=0
+print("a>b ==> ",a>b)
+print("a>=", a>=b)
+print("a<b", a<b)
+print("a<=b", a<=b)

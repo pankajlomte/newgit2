@@ -1,0 +1,94 @@
+##To Read the data entered from the Keyboard by user
+
+x=input("enter n1")
+y=input("ënter n2")
+
+print("sum -->",x+y)#1020 as These are considered as Strings
+
+print('')
+
+#Now converting String input into int
+x=int(input("enter first number"))
+y=int (input("enter second number"))
+print("sum -->",x+y)30
+
+#Now Same code in one line
+print('')
+print("Sum: ",int(input("Enter first num"))+int(input("enter 2nd num")))
+
+
+eno= int(input("enter emp number"))
+ename=input("enter emp name")
+esal=float(input("enter emp salary"))
+eadd=input("enter emp address")
+married=bool(input("Enter emp marital status:[True|False]"))
+
+print('')
+print("Employee INformation below: ")
+print('emp num: ', eno)
+print('emp name', ename)
+print('emp sal: ',esal)
+print('emp add: ', eadd)
+print('emp married: ',married)
+
+print(input("ënter 2 numbers: ")).split()
+
+a,b,c=[int (x) for x in (input("enter 2 numbers: ")).split()]#List of 2 values
+
+#It means for each value entered, use the type casting to convert value into int and then store it into a and b respectively
+
+print("Sum --> a+b+c = ",a+b+c)
+
+
+a,b= [float (x) for x in input("enter 2 numbers: ").split(',')]
+
+x=eval("10+20+30")
+
+##Read 2 float values from the keyboard seperated with comma(,)
+
+a,b= [float (x) for x in input("enter 2 numbers: ").split(',')]
+print("sum : ",a+b)
+
+x=eval("10+20+30")#Evaluates string into int values as given value is int
+print("eval result is ",x)
+
+x=eval("10.2+20+30")
+print("eval with float",x)
+
+ex=input("enter some expression")#Give input as  10+30-40*30/3%4
+result=eval(ex) 
+print("result is --> ", result) #40.0
+
+x=input("enter some list")
+print(type(x)) #Here type of x is string
+
+
+#To make it Appropriate type as per entered value, we can use eval() function
+ 
+x=eval(input("enter some Data"))# Enter List values
+print(type(x)) #Here it shows the type as List.
+
+y=eval(input("enter some Data"))# Enter tuple type values
+print(type(y)) #Here it shows the type as Tuple.
+
+z=eval(input("enter some Data"))#Enter the float value
+print(type(z))#It shows float type
+
+
+##Different Data type values in single line
+
+a,b,c= [eval(x) for x in input("enter 3 different type values").split(',')]
+print ("Enter 3 values --> ", a,b,c)
+
+
+a,b=[eval(x) for x in input("enter the data").split(5)]#must be str or None, not int
+print("a-->",a,"b-->",b)
+ 
+
+#So to resolve above error
+
+a,b= [eval(x) for x in input("enter data with splitter as 5").split('5')]
+print("a-->",a,"b-->",b)#Prints a--> 1 b--> 2
+
+
+

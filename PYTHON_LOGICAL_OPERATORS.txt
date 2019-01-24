@@ -1,0 +1,52 @@
+#Boolean Operators
+
+print(True and False)#False
+print(True or False)#True
+print(not True) #False
+print(not False) #True
+
+print('')
+##For non-Boolean Types
+#0 --> False, non-zero --> True
+#empty String --> False
+
+#print(x and y)
+#If x --> false then result= x otherwise returns y
+
+#and Operator
+print(100 and 20)
+print('' and 20)
+#Returns nothing as result --> '' 
+#because ''==> false
+
+print(0 and 20)#0 as 0 means False, hence result is x=0
+print(1 and 'durga')#durga as 1 -> True, hence result--> durga
+print('')
+
+#or operator
+print(10 or 20)#As 10--> True
+print(0 or 20)#As 0 --> False and 20 is true, so result--> 20
+print(0 or 0)#0
+print('')
+print(0 or True)
+print(0 or False)#False
+print(10 or 10/0)#True as first is true and second will not be checked.
+print(0 or 10/0)#ZeroDivisionError: division by zero
+print('')
+#not Operator
+print(not 10)
+print(not '')
+print(not 0)
+
+
+
+
+
+
+
+
+
+
+
+
+

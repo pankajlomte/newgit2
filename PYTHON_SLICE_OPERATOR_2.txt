@@ -1,0 +1,30 @@
+#Print characters of string along with positive and negative index
+"""
+s=input("enter the string")
+i=0
+for x in s:
+  print('''character present at positive index:{} and at negative index:{} is :{}'''.format(i,i-len(s),x))
+  #i+=1
+  #print(s[::-1])#Right to left i.e. reverse of string
+  #print(s[2:5:1])#Right to left i.e. reverse of string
+  #print(s[2:5:-1])#Prints nothing
+
+print(s[2:5:1])#Right to left i.e. reverse of string
+print(s[2:5:-1])#Prints nothing as moving in backward direction 
+print(s[-1:-4:-1])
+#print(s[2:5:0])#slice step cannot be zero
+print(s[1:-4:-1])
+print(s[:0:-1])
+"""
+#positive --> begin, end-1
+#negative --> begin, end+1
+
+l=[0,1,2,3,4,5,6,7,8,9]
+print(l[-5:0:-9]) #5 
+print(l[2:-3:-1]) #empty 
+print(l[-3:-1:-1]) #empty
+
+#Here Step is greater than end digit i.e. end is 0 and Step is -9 i.e. There should be -9 digits gap in each digit but as there is list till -9 digits only. Hence Value is printed as 5.
+
+
+

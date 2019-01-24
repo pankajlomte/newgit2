@@ -1,0 +1,26 @@
+##Union
+s1={10,20,30,40}
+s2={30,40,50,60}
+print("s1 Union s2 -->",s1.union(s2))#Removes Duplicates
+
+print("s1 | s2 -->",s1|s2)#Same as Union
+print()
+##Intersection
+
+print("s1 intersection s2 -->",s1.intersection(s2))
+print()
+
+##difference
+print("s1 difference s2 i.e. Exclusive OR operation-->",s1.difference(s2))
+print("s1-s2 -->",s1-s2)#same as s1 difference s2
+##Symmetric Difference
+print("""s1^s2 i.e. elements in s1 but not s2 and elements in s2 but not in s1 -->""",s1^s2)
+#An Element should not be present in both s1 and s2
+print("s1 symmetric difference -->",s1.symmetric_difference(s2))
+
+
+
+##Eliminate Duplicates
+l=eval(input("Enter some elements"))
+s=set(l)
+print(type(s))

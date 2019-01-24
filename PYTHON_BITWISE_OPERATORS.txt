@@ -1,0 +1,15 @@
+##Bitwise Operators
+
+print(4&5)#100 & 101 ==> 100 hence result=4
+print(4|5)#100 | 101 ==> 101 hence result=5
+print(4^5)#If both bits are different then 1 otherwise 0
+
+print(~4)#Apply 1's compliment and then 2's compliment
+print(~True)#Consider it as ~1 and then 1's and 2's compliments
+print(~False)#Consider it as ~0 and then 1's and 2's compliments
+
+#Shift Operators
+print(10<<2)
+print(10>>2)
+print(True<<2)#i.e. Considers 1<<2
+print(True>>2)

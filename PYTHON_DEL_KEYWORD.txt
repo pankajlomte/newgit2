@@ -1,0 +1,40 @@
+
+#If we do not know functionality or empty block is there then we can pass statement
+'''
+if True: pass
+else:
+  print("Not using pass")#IndentationError: expected an indented block
+'''
+# del keyword used for Garbage collection
+'''
+x=10
+print(x)
+del x
+#print(x)#NameError: name 'x' is not defined
+
+s='durga'
+del s# Valid
+
+s='durga'
+del s[0]#TypeError: 'str' object doesn't support item deletion
+print(s)
+
+x=10
+y=20
+print(x,y)
+del x,y #Deleting multiple variables
+print(x,y)#Error
+'''
+
+s1="durga"
+s2="durga"
+s3="durga"
+print(id(s1),id(s2),id(s3))
+
+del s1
+s2=None
+print("s2 is ",s2) #s2 is  None
+#del id(s1)#can't delete function call
+
+
+
