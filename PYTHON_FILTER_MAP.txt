@@ -1,0 +1,47 @@
+#filter() --> in-built function
+def iseven(x):
+  if x%2==0:
+    return True
+  else:
+    return False
+print(iseven(9))
+print(iseven(90))
+print()
+
+l=[0,5,12,13,63,88,50,10]#List input
+print(l)
+print()
+l1=list(filter(iseven,l)) #iseven the function defined by user
+print(l1)
+print()
+#WIthout writing seperate function and using Lambda expression
+l1=list(filter(lambda x:x%2==0,l))# For even
+print(l1)
+l1=list(filter(lambda x:x%2!=0,l))#For Odd
+print(l1)
+print()
+
+##map()
+
+# Without lambda function
+def double(x):
+  return 2*x
+l=[1,2,3,4,5]
+l1=list(map(double,l))
+print(l1)#[2, 4, 6, 8, 10]
+print()
+#Using lambda
+l1=list(map(lambda x:x*2,l))
+print(l1)
+print()
+#Map function With Multiple sequences
+l1=[1,2,3,4]
+l2=[10,20,30,40]
+l3=list(map(lambda x,y:x*y, l1,l2))#[10, 40, 90, 160]
+print(l3)
+print()
+#l1 and l2 below have different number of elements but no error. extra elements are ignored
+l1=[1,2,3,4]
+l2=[10,20,30,40,50,60]
+l3=list(map(lambda x,y:x*y, l1,l2))#[10, 40, 90, 160]
+print(l3)

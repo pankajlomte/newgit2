@@ -1,0 +1,30 @@
+t=(10,20,30)
+print(type(t))
+print()
+t=(10)#Here comma is not given at the end position hence it is considered at int by PYTHON
+print(type(t))
+
+t=(10,) #For single element in Tuple, it should end with comma.
+print(type(t))
+print()
+
+##Functions in Tuple
+
+#Tuple is IMMUTABLE
+
+t=(10,20,30,40)
+t1=tuple(sorted(t))#sorted() returns List hence converted it into tuple
+print(type(t1))
+print("Sorted tuple using sorted() function --> ",t1)
+print(min(t1))
+print(max(t1))
+
+
+s1='durga'
+print(min(s1))#a .......This is based on unicode value
+print(max(s1))#u
+
+s2='durgA'
+print(min(s2))#A...As Unicode value of A is less than unicode value of a
+print(max(s2))#u
+

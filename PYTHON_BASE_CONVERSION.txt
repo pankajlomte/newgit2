@@ -1,0 +1,51 @@
+
+print "=============== Convert to Binary ==================="
+
+x=15
+print bin(x) # Convert Decimal to Binary
+x=0O777
+print bin(x) # Convert Octal to Binary
+x=0x1234
+print bin(x) # Convert Hexadecimal to Binary
+
+print "=============== Convert to Octal ==================="
+
+x=786
+print oct(x) # Convert Decimal to Octal
+x=0B1111
+print oct(x) # Convert Binary to Octal
+x=0X12
+print oct(x) # Convert Hexadecimal to Octal
+
+print "=============== Convert to Hexadecimal ==================="
+
+x=786
+print hex(x) # Convert Decimal to Hexadecimal
+x=0b10
+print hex(x) # Convert Binary to Hexadecimal
+x=0O777
+print hex(x) # Convert Octal to Hexadecimal
+
+print "=============== Decimal to Other Types ==================="
+
+print (bin(15))
+print (oct(15))
+print (hex(15))
+
+print "=============== Binary to Other Types ==================="
+
+print (bin(0B1111))
+print (oct(0b1111))
+print (hex(0B1111))
+
+print "=============== Octal to Other Types ==================="
+
+print (bin(0O17))
+print (oct(0O17))
+print (hex(0o17))
+
+print "=============== Hexadecimal to Other Types ==================="
+
+print (bin(0xf))
+print (oct(0xf))
+print (hex(0xf))

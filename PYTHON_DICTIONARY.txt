@@ -1,0 +1,180 @@
+##Eliminate Duplicates
+'''
+l=eval(input("Enter some elements"))
+s=set(l)
+print(type(s))
+print(l)
+print(s)#Removes Duplicates
+
+l1=[]
+for x in l:
+  if x not in l1:#Here also Duplicates eliminated
+    l1.append(x)
+print(l1)
+
+
+##Print Just vowels from the words
+w=input("Enter some elements")
+s=set(w)
+v={'a','e','i','o','u'}
+print("Vowels in given word are  -->",s.intersection(v))
+
+##Dictonary
+d={}
+print("TYPE OF Empty DICTIONARY --> ",type(d))
+d=dict()
+print()
+print(type(d))
+#Add Keys and Values to the Dictionary
+d[100]='Pankaj'
+d[200]='Lomte'
+d[300]='Latur'
+print()
+print(d)
+
+di={'a':100,'b':200,'c':590}
+print(di)
+print(di['a'])#Prints corresponding value
+#print(di['z'])#KeyError: 'z' as z is not present in dictionary
+
+##Enter name and %marks in Dictionary and display it
+rec={} #Empty Dictionary
+n=int(input("Enter number of students"))#As input function returns string, need to convert it to int
+i=1
+while i<=n:#Executes till number of students
+  name=input("Ënter Student name")
+  marks=input("Enter marks")
+  rec[name]=marks
+  i=i+1
+print()
+print("Name of Student","\t","% of Marks")
+for x in rec:
+  print("\t",x,"\t\t",rec[x])
+
+
+##Update Dictionary
+
+d={101:'pankaj',102:'lomte',103:'latur'}
+d[101]='HARB' #Updates the value for the Key 101.
+
+print("Updated dictionary -->",d)
+
+print()
+##Delete elements from Dictionary
+
+del d[102]
+
+print("Dictionary after deletion -->",d)
+
+#d[105]# KeyError: 105
+print()
+
+d.clear()#Clears all the keys and values from Dictionary
+print("After clear dictionary --> ",d)
+
+d[201]='PYTHON'
+print(d)
+print()
+del d # Deletes entire dictionary i.e. we cannot use variable name d after 
+#print("Now after using #del d --> ",d)#name 'd' is not defined
+
+#del d.keys() # can't delete function call
+
+#So del can not be used with function call
+print()
+
+##How to specify multiple values for a single Key
+
+list=['durga','rajni','kamal']
+d={100:list}
+
+print("Multiple Values for the single Key --> ",d)
+
+###Important Functions of Dictionary
+
+##Empty Dictionary
+d=dict()
+print(d) #Empty dictionary
+
+d=dict()# This is also valid
+
+##Create Dictionary 
+
+#Create Dictionary with list of Tuples
+d=dict([(100,'pankaj'),(200,'durga'),(300,'durga')])
+print("Dictionary with list of tuples -->",d)
+d.clear()
+
+#Create Dictionary with Set of Tuples
+print("Before using set of tuples --> " , d)
+d=dict({(100,'pankaj'),(200,'durga'),(300,'durga')})
+print()
+print("Dictionary with Set of tuples -->",d)
+d.clear()
+
+#Create Dictionary with Tuple of Tuples
+print("Before using Tuple of tuples --> " , d)
+d=dict(((100,'pankaj'),(200,'durga'),(300,'durga')))
+print()
+print("Dictionary with Tuple of tuples -->",d)
+
+#d=dict({[100,'sadf'],[1001,'srwejn']})#unhashable type: 'list'
+
+##Get function
+print(d.get(100))
+print(d.get(99))#None........As 99 is not available in the dictionary
+
+print(d.get(888,'default value'))#prints default value as key is not available in dictionary
+
+##pop function
+print(d.pop(100))#Returns and removes the values for the specified Key
+print(d)
+print()
+
+##popitem function
+print(d.popitem())#Returns and Removes the Key-value randomly.
+print(d)
+
+print()
+print(d.popitem())
+print(d)
+#print(d.popitem())#KeyError: 'popitem(): dictionary is empty'
+
+d=dict(((100,'durga'),(200,'ravi')))
+print(d.keys()) # Returns List Object of the dict_keys class
+
+for k in d.keys():
+  print(k)
+
+print(d.values())# Returns List Object of the dict_values class
+d.clear()
+
+##items()
+
+d={100:'pp',200:'jj'}
+list=d.items() #Returns list of tuples which is object of dict_items class
+print(list) #dict_items([(100, 'pp'), (200, 'jj')])
+
+for k,v in d.items():
+  print(k,"...",v)
+
+d[100]='python3'
+print()
+print(d.setdefault(k,v))
+print(d)
+print()
+print(d.setdefault(100,'sunny'))
+print(d)#Returns existing dictionary
+print()
+print(d.setdefault(9928,'leone'))#As Key is not in Dictionary , it is added
+print(d)
+
+d.clear()
+
+##Update
+
+d={100:'durga',200:'ravi'}
+d1={'a':666,'b':999}
+d.update(d1)#Contents of d1 added to d
+print(d)
+

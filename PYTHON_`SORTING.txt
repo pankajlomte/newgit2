@@ -1,0 +1,129 @@
+
+ ##Substring count without using inbuilt function
+ '''
+ s=input("Enter the main string")
+ sub=input('Enter the substring')
+ n=len(s)
+ pos=-1
+ count=0
+ flag=False
+ while True:
+   pos=s.find(sub,pos+1,n)
+   if pos==-1:
+     break
+   print("found at index",pos)
+   flag=True
+   count=count+1
+ print()
+ print("Substring count without using PYTHON built in function -->",count)
+ if flag==False:
+   print("not found")
+ print()
+ ## Substring count using PYTHON in built function
+ print("Substring count using PYTHON built in function --> ",s.count(sub))
+ print()
+ print(s.count(sub,0,13)) # i.e. from 0 index to 12 index. (end-1)
+ 
+ ##Replace Operation
+ 
+ s="Replace String operation in Java"
+ print(s)
+ print()
+ print("Address Before replacement",id(s))
+ s=s.replace("Java","PYTHON")
+ print("Address after replacement",id(s))
+ print(s)
+ print()
+ 
+ s1=s.replace("PYTHON","Selenium")
+ print(s," Address  --> ", id(s))
+ print(s1," Address  --> ", id(s1))
+ #Address is different
+ 
+ #Splitting of String
+ 
+ s="pankaj lomte latur"
+ l=s.split() #splits by space
+ print(type(l))# list type
+ for x in l:
+   print(x)
+ 
+ s1="02-03-2018"
+ l1=s1.split('-')
+ for x1 in l1:
+   print(x1)
+ 
+ #Using rsplit function
+ #It has max 2 arguments: 1. seperator 2.maxsplit
+ 
+ s="pankaj lomte in latur today"
+ l=s.split(' ',3) #Only 3 spaces splitting
+ for x in l:
+   print(x)
+ print()
+ lr=s.rsplit(' ', 3)#Starts splitting from right side of the string
+ for x in lr:
+   print(x)
+ 
+ ##join() function
+ 
+ #List
+ l=['pankaj','lomte','harbinger','team']
+ s='-'.join(l) #join words in list with -
+ print(s) # pankaj-lomte-harbinger-team
+ 
+ #Tuple
+ t=('pankaj','lomte','test','engg')
+ s='  '.join(t) #join words in Tuple with 
+ print(s) # pankaj  lomte  test  engg
+ 
+ ## Changing letter case
+ 
+ s="pAnkaj loMte Test engG"
+ print(s.upper()) #PANKAJ LOMTE TEST ENGG
+ print(s.lower()) #pankaj lomte test engg
+ print(s.swapcase()) #PaNKAJ LOmTE tEST ENGg
+ print(s.title()) #Pankaj Lomte Test Engg
+ print(s.capitalize()) #Pankaj lomte test engg
+ 
+ 
+ ##Checking Starting and Ending part of the string
+ s="learning python on udemy"
+ print(s.startswith('learning')) #True
+ print(s.endswith('udemy')) #True
+ 
+ ##Find Characters at odd and even positions
+ print("Characters at Even position ", s[::2])
+ print("Characters at Odd position ", s[1::2])
+ '''
+ 
+ ##Seperate numbers and alphabets from the string
+ 
+ s=input("Enter the string")
+ s1=s2=s3=output=''
+ 
+ for x  in s:
+   if x.isalpha(): #To check if character is alphabet or not
+     s1=s1+x
+   elif x.isdigit():
+     s3=s3+x
+   else:
+     s2=s2+x #All characters except alphabets
+ print("s1 --> ",s1)
+ print("s2 --> ",s2)
+ print("s3 --> ",s3)
+ 
+ for x in sorted(s1): #It sorts the list
+   output=output+x
+ print("Sorted S1 -> ",output)#Returns the String
+ 
+ for x in sorted(s3): #It sorts the list
+   output=output+x
+ print("Sorted S3 -> ",output)#Returns the String
+ print()
+ #Another way to sort
+ output=s1+s3
+ sortedoutput= sorted(output)
+ print("Sorted --> ",sortedoutput)#But returns the List
+ sortedinstring = ''.join(sortedoutput)
+print("sortedinstring --> ", sortedinstring)#Returns the String

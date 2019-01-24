@@ -1,0 +1,52 @@
+'''
+s=set('durga')
+print(s)
+
+s=set(range(1,6))
+print(s)
+
+s={}
+print(type(s))
+'''
+
+s={10,20,30}
+#s.add(99,12)#add() takes exactly one argument (2 given)
+print(s)
+x=[0,2,9,6,'a']
+s.update(x)
+print(s)
+
+#s.update( 10,20,30 )#'int' object is not iterable
+print(s)
+print()
+s={30,40,44,509,999}
+s.update(range(1,10,2),range(2,10,2))
+print()
+print(s)
+
+s.add('python')#Treated as single string
+print(s)
+s.update('python')#Treated as sequence
+print(s)
+s.update('kt'+'kulkarni')
+print(s)
+print()
+s1=s.copy()
+print("s1===> ",s1)
+s={10,20,99,3038,39}
+print(s.pop())
+print(s)
+'''print(s.pop())
+print(s)
+print(s.pop)
+print(s)
+print(s.pop)
+print(s)'''
+#s.remove(30)
+print(s)
+print("using discard")
+print(s.discard(110))
+print(s)
+print()
+print(s.clear())
+print(s)

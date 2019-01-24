@@ -1,0 +1,98 @@
+##Nested Functions
+'''def f1():
+  def inner(a,b):
+    print("sum --> ",a+b)
+  inner(1,2)
+  inner(1,5)
+f1()
+print()
+
+#Function can return another function as below
+def outer():
+  print("Outer function started")
+  def inner():
+    print("Inner function execution")
+  print("Outer function returning inner function")
+  return inner # Inner function NOT Executed when bracket is removed
+
+outer()#Just Executes Outer function and not the inner function
+print()
+f1=outer()#f1() pointing to inner function as outer() returns inner
+f1() #Just executes inner function
+f1() #Just executes inner function
+
+f1=outer #Aliasing
+f1=outer() #Function call
+
+#
+def outer():
+  print("Outer function started")
+  def inner():
+    print("Inner function execution")
+    print(id(inner))
+  print("Outer function returning inner function")
+  return inner() #Inner function executes, So it calls inner function.
+  #After calling inner function , as inner function returns nothing, return type is #nothing. Hence f1 () results into None.
+  #f1()=outer()#can't assign to function call
+  f1=outer()
+
+###Function Decorators
+
+#Decorator with Annotation
+def decor(func):#func is some function as an input
+  def inner(name):
+    if name=='sunny':
+      print("Hello Sunny Bad morning")
+    else:
+      func(name)
+  return inner
+@decor #This is to tell PYTHON that whenver we are calling #wish function, decorator "decor" above should be executed.
+#@decor --> Syntax == @Decorator name
+#@decor automatically calls decorator 
+#@decor --> by this annotation PYTHON automatically passes wish 
+# function as argument to decorator.
+def wish(name):
+  print("Hello",name,"Good Morning")
+
+wish("pankaj")
+wish("sunny")
+
+#If needed Both Extended and Original functionality with decorator #without annotation
+def decor(func):#func is some function as an input
+  def inner(name):
+    if name=='sunny':
+      print("Hello Sunny Bad morning")
+    else:
+      func(name)
+  return inner
+
+#decorfunction is decorator without annotation.
+#As wish is passed explicitly, wish function returns inner function and is assigned to decorator "decorfunction"
+def wish(name):
+  print("Hello",name,"Good Morning")
+decorfunction=decor(wish)
+
+wish("sunny")#Calls wish function only..Hello Sunny Good morning
+decorfunction("sunny")#Decorator executes..Hello Sunny Bad morning
+'''
+
+##
+def smartdivision(func):
+  def inner(a,b):
+    if b==0:
+      print("Cannot divide by Zero")
+    else:
+      return func(a,b)
+  return inner
+@smartdivision
+def division(a,b):
+  return a/b
+
+print(division(10,0))
+print(division(10,2))
+print(division(10,1))
+
+
+
+
+

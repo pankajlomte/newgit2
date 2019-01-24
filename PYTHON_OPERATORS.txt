@@ -1,0 +1,76 @@
+#None data type
+def f1(): a=10
+def f2(): print("dont be None")
+print(f1())# returns None
+
+#pass
+#def f3(): #unexpected EOF while parsing
+
+#In this case where function is not doing anything , python throws an error.
+#So to overcome this, pass is used.
+
+def f4():
+    pass #None is returned.
+#Escape Characters
+s="pankaj\nlomte"
+print(s)
+
+#Escape Characters
+s1="\"using\" \"back\" slash\""
+print(s1)#reterns "PYTHON" "BY" dURGA"
+s2='"using " "single" "quotes" '
+print(s2)
+s3="'using' 'double' 'quotes' "
+print(s3)
+s4='''"using"'Tripple Single' "quotes" '''
+print(s4)
+s5="""'using 'Tripple double' 'quotes'"""
+print(s5)
+
+#Constants
+MAX_VALUE=10
+print(MAX_VALUE)
+MAX_VALUE=11 #Value can be changed.
+print(MAX_VALUE)
+
+#OPERATORS
+
+## Arithmetic Operatos
+print('')
+print("Arithmetic Operators")
+a=10 
+b=2
+print("10+2 = ",a+b)
+print("10-2 = ",a-b)
+print("10*2 = ",a*b)
+print("10/2 = ",a/b)#Always returns float value.--> 5.0
+print("10%2 = ",a%b)
+print("10//2 = ",a//b)#Floor Division:Returns both int or float
+print("5.2//1.3 = ",5.2//1.3)#4.0
+print("10**2 = ",a**b)#returns power of number--> Here square
+print("10.5/2 = ",10.5/2)#5.25
+print("10.5**2 = ",10.5**2)
+print("10.5//2 = ",10.5//2)#5.0. 
+#It rounds up the value to nearest integer value but in float form.
+print('durga'+'3')#durga3
+print(3*'durga ')
+print('durga '*3)
+print(10** -2)#0.01
+print((10+2j)**(10+3j))
+
+##Relational Operators
+
+a=40
+b=20
+if(a>b): print('a is greater than b')
+else: 
+    print('a is less than b')
+    print('ghierhgi')
+    print('inside the else block')
+print('outsite the block: Indentation')
+
+print(10<20)#True
+print(10<20<30)#True
+print(10<20<35>40)#False
+print(10<20<35>32)#True
+

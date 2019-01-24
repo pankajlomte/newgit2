@@ -1,0 +1,89 @@
+import time
+from imp import reload
+import module2#Module1 is loaded only once.
+print("Before sleep time")
+time.sleep(30)
+#import module1#Here module1 is not reloaded.
+reload(module2)
+print("After 2nd import module2")
+
+#dir function
+x=10
+y=20
+def f1():
+  print("dir function check")
+print(dir())
+#Prints x,y,f1 at the last along with other members as well.
+#['__builtins__', '__doc__', '__name__', 'f1', 'x', 'y']
+print()
+print(__builtins__)
+print(__doc__)
+print(__name__)#__main__ 
+print(f1)
+print(x)
+
+
+from math import *
+print(sqrt(225))
+print(ceil(10.1))#Gives immediate greater integer
+print(floor(10.1))#Gives immediate smaller integer
+print(fabs(-10.0549797))#Ignores -ve sign, gives absolute value
+
+#Working with Random modules
+import math 
+help(math)
+'''
+#random function
+'''from random import *
+for i in range(10):
+print(random())#Generates random float values between 0 and 1
+  print(randint(1,100))#Generates random integers inclusive
+  print(uniform(1,10))#float values in given range , Not inclusive
+  print(randrange(1,6,3))#Start , stop ,step
+  print(randrange(9))#Start is optional and defaul value=0
+  #stop is mandatory
+  #Step is optional and default value = 1
+
+#choice() function
+from random import *
+list = ['sunny','pankaj','bunny','loms']
+for i in range(5):
+  print(choice(list))#returns random objects from the list
+
+#Generate random 6 digit OTP number
+from random import *
+for i in range(10):
+  #print(randint(0,9)*6,sep='')#No desired output
+  print(randint(0,9),randint(0,9),randint(0,9),randint(0,9),randint(0,9),randint(0,9),sep='')#desired output
+  #print(str(randint(0,9))*6)#No desired output. It generates 6 digit number but it is like 222222..digit is repeated 6 times.
+  #print(randint(000000,999999))#No desired output. Sometimes generates 5 digit number.and
+  #print(randint(100000,999999))#One digit is repeated.Does not start number by zero.
+  #print(randint(010000,999999))#SyntaxError: invalid token ..010000
+'''
+#Generate random 6 length password
+from random import *
+for i in range (10):
+  #print(chr(randint(65,65+25)),randint(0,9))#by default it prints k 1 ...so one space is added bet k and 1
+  #To avoid the space, give sep='' i.e. nospace
+  #print(chr(randint(65,65+25)),randint(0,9),sep='')
+  #Now to for 6 length password
+  print(chr(randint(65,65+25)),randint(0,9),chr(randint(65,65+25)),randint(0,9),chr(randint(65,65+25)),randint(0,9),sep='')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

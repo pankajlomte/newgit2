@@ -1,0 +1,76 @@
+# Repetition Operator
+s='pankaj'
+print (s*10) #prints string 10 times.
+print (len(s))
+
+c='a'
+print (type(c))
+
+#Type Casting
+print ('')
+print ('========= Other Type to Int conversion ===========')
+
+print (int(123.456)) #Converts float type into int type
+# print (int(10+20j)) #can't convert complex to int
+
+print(int(True)) #As True=1 in PYTHON, it prints 1
+print(int(False)) #As False=0 in PYTHON, it prints 0.
+print (int("10")) #String to int conversion
+#print(int("10.5"))#invalid literal for int() with base 10: '10.5'
+
+print ('')
+print ('========= Other Type to Float conversion ===========')
+
+print(float(10)) #Converts int to float
+#print(float(10+20j))#can't convert complex to float
+print(float('10'))#Converts string to float --> 10.0
+print(float(True))#Converts Boolean to float --> 1.0
+print(float(False))#Converts Boolean to float--> 0.0
+print(float("10.5"))#10.5
+#print(float("ten"))#Error: could not convert string to float: 'ten'
+#print(float(0b111))#Error: could not convert string to float: 'ten'
+
+print ('')
+print ('========= Other Type to Complex conversion ===========')
+
+#FORM-1 i.e. with one Argument only.
+print(complex(10)) #Converts int to complex --> 10+0j
+print(complex(10.5))#Converts float to complex --> 10.5+0j
+print(complex(True))#Converts boolean to complex --> 1.0+0j
+print(complex(False))#Converts boolean to complex --> 0+0j ==> 0j
+#print(complex('ten'))#Error: complex() arg is a malformed string
+
+#FORM-2 i.e. with 2 Arguments 
+print(complex(10,20))#10+20j
+#print(complex('10','20'))#complex() can't take second arg if first is a string
+
+print ('')
+print ('========= Any Other Type to Boolean conversion ===========')
+
+print(bool(1))#Converts int to boolean --> True
+print(bool(0))#Converts int to boolean --> False
+print(bool(2))#True
+print(bool(2.5))#Converts float to boolean --> True
+print(bool(99999999999999999999))#True
+print(bool(1224645646464646464646.5))#True
+print(bool(0.000000000))#True
+print(bool(0.00000005))#True
+print(bool(10+1j))#Converts complex to boolean -> As result is non-zero -> True
+print(bool(0+0j))#Converts complex to boolean -> Result is zero ==> False
+print(bool('1'))#Converts string to boolean
+print(bool("1.5"))#True
+print(bool('False'))#True
+print(bool("0.0"))#True
+print(bool(""))#As Argument is empty string --> False
+print(bool(" "))#As Argument contains a space --> True
+
+print ('')
+print ('========= Any Other Type to String conversion ===========')
+
+print(str(2))#Converts int to string --> 2
+print(str(2.5))#Converts float to string --> 2.5
+print(str(0b1111))#Converts binary to string --> 15
+print(str(True))#Converts boolean to string --> True
+print(str(False))#Converts boolean to string --> False
+print(str('10+20j'))#Converts complex to string --> 10+20j
+print(str('2'))# 2

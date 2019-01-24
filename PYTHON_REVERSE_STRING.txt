@@ -1,0 +1,27 @@
+##Print the characters in forward direction
+#Using While Loop
+s=input("enter some data")
+i=0
+n=len(s)
+print(n) #
+while i<n:
+  print(s[i],end='')
+  i+=1
+print()
+#Using Slice operator in forward direction
+print("Using Slice operator in Forward direction")
+print(s[:])
+
+##Print characters in backward direction
+print()
+#Using While loop
+i=n-1
+print("Using While Loop in backward direction")
+while i>=0:
+  print(s[i],end='')
+  i-=1
+print()
+print("Using Slice operator in backward direction")
+#Using Slice operator in backward direction
+print(s[::-1])
+

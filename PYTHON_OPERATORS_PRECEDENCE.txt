@@ -1,0 +1,28 @@
+##Operator Precedence
+
+a,b,c,d = 30,20,10,5
+print((a+b)*c/d)
+print((a+b)*(c/d))
+print(a+(b*c)/d)
+
+import math
+print(math.sqrt(16))
+print(math.pi)
+
+import math as m
+print(m.sqrt(25))
+print(math.sqrt(25))
+
+print('')
+import math 
+from math import sqrt,pi#imports sqrt and pi functions from math module
+
+print(sqrt(64))#directly we can use the functions without module name
+print(pi)
+
+import math
+from math import *#Imports all the members of math library
+
+r=5
+area=pi*r**2
+print("Area of circle is-->",area)

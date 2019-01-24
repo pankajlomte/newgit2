@@ -1,0 +1,63 @@
+##Command Line Arguments
+'''
+import sys
+from sys import argv
+print(type(argv))# List
+print(argv[0])
+
+
+print("aesfsaef")
+print()
+print("654654")
+
+
+print ("hello \nmaster")#Escape character 
+print()
+print("pankaj"+"lomte")#when used + (Concatenation) operator, both arguments should be strings.
+print('pankaj'*3)#When used * then one argument must be int.
+print(True*3) #3 as True=1  
+
+print(1,2,43,sep=' &')#Prints the values with given seperator
+
+print()
+ 
+
+print("pankaj")
+print("lomte")
+#Here by default , every print statement prints the value on new line
+
+#so to print the value in the same line with some separator
+print("pankaj",end=' ')
+print("lomte",end=' ') #pankajlomte
+ 
+
+print(10,20,30,sep=':')# 10:20:30
+
+a,b,c=10,20,30
+
+#print("formatted string" %(variable list))
+
+print("a value formatted is %i" %a)
+print("formatted string a value is %i and b value is %i" %(a,b))
+
+name='pankaj'
+l=[10,20,30,40]
+
+print("Formatted string \n %s list is %s" %(name,l))# 2 arguments so 2 % symbols
+
+# 	Print function with Replacement Operator
+
+'''
+# {} --> replacement operator
+
+name='Pankaj'
+salary=20000
+gf='Sunny'
+
+print("Hello {0} your salary is {1} and your gf {2} is waiting".format(name,salary,gf))
+#Hello Pankaj your salary is 20000 and your gf Sunny is waiting
+
+print("Hello {} your salary is {} and your gf {} is waiting".format(name,salary,gf))#Wihout Indexes
+
+print("Hello {x} your salary is {y} and your gf {z} is waiting".format(z=gf,y=salary,x=name))#
+

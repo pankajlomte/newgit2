@@ -1,0 +1,14 @@
+a=10
+print (type(a)) #Gives data type of a
+b=0B1111 #Binary
+print b
+c=0b1110 #Binary
+print c
+d=0o11   #Octal
+print d
+e=0O11   #Octal
+print e
+f=0XFace #Hexadecimal
+print f
+g=0xFace #Hexadecimal 
+print g

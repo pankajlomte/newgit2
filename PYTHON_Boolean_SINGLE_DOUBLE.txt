@@ -1,0 +1,22 @@
+print("===String can be in the single or Double quotes===")
+
+print ('single')
+print ("Double")
+
+print("===For MultiLine use tripple Single or tripple Double quotes===")
+
+print ('''Multi 
+Line''')
+print ("""Multi 
+Line""" )
+
+print("====== To print Single/Double quotes use tripple single or tripple Double quotes ========")
+
+print ('''Including "Single quotes" in the string ''')
+print ("""Including "Double Quotes" in the string """)
+
+print ("============== Boolean Operations ===========")
+print (True+True)
+print (True+False)
+print (True*False)
+print (False/True)

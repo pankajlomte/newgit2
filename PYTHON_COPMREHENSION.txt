@@ -1,0 +1,45 @@
+## Make a list having squares of numbers
+
+#By Simple way
+l=[]
+for x in range(1,11):
+  l.append(x*x)
+print("List in simple way --> ",l)
+print()
+
+##Comprehensions
+l=[x*x for x in range(1,11)]
+print("List in Comprehension --> ",l)
+
+print()
+#Print even elements from list like above
+
+l2=[x for x in l if x%2==0] #Add x value which is value from list l1 to list l2 only if x frmo l1 is even
+print("Even squares from list l1 are --> ",l2)
+
+l3=[2**x for x in range(1,11)]
+print(l3)
+l4=[x for x in l if x%2!=0]
+print(l4)
+
+##Print first character from each element from the list
+words=['ashok','laksha','mahesh','nana patekar']
+firstcharacter=[w[0] for w in words]
+print(firstcharacter) #['a', 'l', 'm', 'n']
+l=[w for w in words if len(w)>6]
+print(l)
+##Print all elements from n1 which are not in n2
+n1=[10,20,30,40]
+n2=[30,40,50,60]
+l=[x for x in n1 if x not in n2]
+print(l)#[10, 20]
+
+##
+
+words="Python is easier than java language"
+wordslist=words.split() #Splits as per space so it is converted to a list
+print(type(wordslist))
+print(wordslist)
+print()
+l=[[x.upper(),len(x)] for x in wordslist ]#[['PYTHON', 6], ['IS', 2], ['EASIER', 6], ['THAN', 4], ['JAVA', 4], ['LANGUAGE', 8]]
+print(l)
